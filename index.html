@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phạm Ngọc Huy | Portfolio</title>
-<meta name="description" content="Portfolio của Phạm Ngọc Huy, sinh viên Kỹ thuật Máy tính tại HCMUT.">
+<meta name="description" content="Portfolio of Phạm Ngọc Huy, Computer Engineering student at HCMUT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@
     width:min(1100px,92%);margin:0 auto;padding:.7rem 1.4rem;
     display:flex;justify-content:space-between;align-items:center;border-radius:999px;
   }
-  .logo{font-weight:800;font-size:1.1rem;color:var(--navy)}
+  .logo{font-weight:800;font-size:1.05rem;color:var(--navy);white-space:nowrap}
   .logo span{color:var(--blue-600)}
   .links{display:flex;gap:1.6rem;font-weight:500;font-size:.95rem}
   .links a{transition:color .2s}
@@ -91,8 +91,10 @@
     background:rgba(255,255,255,.7);border:1px solid var(--line);
     font-size:.88rem;font-weight:600;color:var(--blue-600);margin-bottom:1.2rem;
   }
-  .hero h1{font-size:clamp(2.6rem,6.5vw,4.4rem);font-weight:800;line-height:1.05;margin-bottom:.8rem;letter-spacing:-.01em}
-  .hero h1 em{font-style:normal;color:var(--blue-600)}
+  .hero h1{
+    font-size:clamp(2rem,3.6vw,2.9rem);font-weight:800;line-height:1.15;
+    margin-bottom:.8rem;letter-spacing:-.01em;color:var(--navy);white-space:nowrap;
+  }
   .role{font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
   .hero p.desc{max-width:520px;color:var(--muted);margin-bottom:2rem}
   .cta{display:flex;flex-wrap:wrap;gap:1rem}
@@ -149,7 +151,7 @@
     background:var(--blue-100);padding:.25rem .7rem;border-radius:999px;
   }
   .lang::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue-400)}
-  .project h3{font-size:1.12rem}
+  .project h3{font-size:1.12rem;overflow-wrap:anywhere}
   .project p{color:var(--muted);font-size:.95rem;flex:1}
   .project a.more{font-weight:700;color:var(--blue-600)}
   .project a.more:hover{text-decoration:underline}
@@ -183,6 +185,7 @@
   @media (max-width:900px){
     .hero-grid,.about-grid{grid-template-columns:1fr}
     .hero-photo{order:-1}
+    .hero h1{white-space:normal}
     .about-photo{min-height:380px}
     .skills-grid{grid-template-columns:1fr}
     .gallery{grid-template-columns:1fr 1fr}
@@ -204,12 +207,12 @@
 
 <header>
   <nav class="nav glass">
-    <a href="#home" class="logo">PNH<span>.</span></a>
+    <a href="#home" class="logo">Phạm Ngọc Huy<span>.</span></a>
     <div class="links">
-      <a href="#about">Giới thiệu</a>
-      <a href="#skills">Kỹ năng</a>
-      <a href="#projects">Dự án</a>
-      <a href="#contact">Liên hệ</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 </header>
@@ -219,28 +222,27 @@
   <section class="hero container" id="home">
     <div class="hero-grid">
       <div class="reveal">
-        <span class="badge">Chào mừng đến không gian của mình</span>
-        <h1>Phạm Ngọc <em>Huy</em></h1>
-        <p class="role">Sinh viên Kỹ thuật Máy tính · HCMUT</p>
+        <span class="badge">Welcome to my digital space</span>
+        <h1>Phạm Ngọc Huy</h1>
+        <p class="role">Computer Engineering Student · HCMUT</p>
         <p class="desc">
-          Mình thích học lập trình, khám phá công nghệ và xây dựng những sản phẩm
-          có ích. Hiện đang quan tâm đến phát triển web, trí tuệ nhân tạo và các
-          bài toán thuật toán.
+          I enjoy learning to code, exploring new technology, and building useful products.
+          I'm currently focused on web development, artificial intelligence, and algorithmic problem solving.
         </p>
         <div class="cta">
-          <a href="#projects" class="btn btn-primary">Xem dự án</a>
-          <a href="https://github.com/AndrewPham3101" target="_blank" rel="noopener" class="btn btn-ghost">GitHub của mình</a>
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/AndrewPham3101" target="_blank" rel="noopener" class="btn btn-ghost">My GitHub</a>
         </div>
         <div class="stats">
-          <div class="stat glass"><b>13</b><small>Repository trên GitHub</small></div>
-          <div class="stat glass"><b>C++ · Python</b><small>Ngôn ngữ chính</small></div>
-          <div class="stat glass"><b>HCMUT</b><small>Đại học Bách Khoa TP.HCM</small></div>
+          <div class="stat glass"><b>13</b><small>Repositories on GitHub</small></div>
+          <div class="stat glass"><b>C++ · Python</b><small>Core languages</small></div>
+          <div class="stat glass"><b>HCMUT</b><small>Ho Chi Minh City University of Technology</small></div>
         </div>
       </div>
 
       <div class="hero-photo reveal">
         <div class="frame">
-          <img src="assets/hero.jpg" alt="Phạm Ngọc Huy đứng trước khuôn viên trường Bách Khoa, mỉm cười">
+          <img src="assets/hero.jpg" alt="Phạm Ngọc Huy standing in front of the HCMUT campus, smiling">
         </div>
       </div>
     </div>
@@ -249,29 +251,30 @@
   <!-- ABOUT -->
   <section id="about" class="container">
     <div class="reveal">
-      <span class="eyebrow">Giới thiệu</span>
-      <h2>Về mình</h2>
-      <p class="lead">Một chút về con người và hành trình học tập của mình.</p>
+      <span class="eyebrow">About</span>
+      <h2>About Me</h2>
+      <p class="lead">A glimpse into who I am and how I learn.</p>
     </div>
     <div class="about-grid">
       <div class="glass about-photo reveal">
-        <img src="assets/portrait.jpg" alt="Ảnh chân dung Phạm Ngọc Huy">
+        <img src="assets/portrait.jpg" alt="Portrait of Phạm Ngọc Huy">
       </div>
       <div class="glass card reveal">
         <p>
-          Hiện mình là sinh viên ngành Kỹ thuật Máy tính tại Trường Đại học Bách Khoa,
-          ĐHQG TP.HCM (HCMUT). Mình luôn tìm cách cải thiện kỹ năng và mở rộng kiến thức,
-          từ lập trình hệ thống bằng C/C++ đến ứng dụng web và AI.
+          I am a Computer Engineering student at the Ho Chi Minh City University of Technology
+          (HCMUT), Vietnam National University, Ho Chi Minh City. I keep working to strengthen
+          my skills and broaden my knowledge, from low-level programming in C/C++ to web
+          applications and AI.
         </p>
         <p>
-          Mình tin rằng học qua dự án là cách tốt nhất để hiểu sâu một vấn đề. Vì vậy,
-          mỗi bài tập hay ý tưởng nhỏ đều là cơ hội để mình thực hành và rút kinh nghiệm.
+          I believe the best way to truly understand a problem is to build something with it.
+          Every exercise and side idea is a chance for me to practice and learn from my mistakes.
         </p>
         <ul class="info-list">
-          <li><span>Trường</span><b>HCMUT</b></li>
-          <li><span>Ngành</span><b>Kỹ thuật Máy tính</b></li>
-          <li><span>Nơi ở</span><b>TP. Hồ Chí Minh</b></li>
-          <li><span>Quan tâm</span><b>Web, AI, Thuật toán</b></li>
+          <li><span>University</span><b>HCMUT</b></li>
+          <li><span>Major</span><b>Computer Engineering</b></li>
+          <li><span>Location</span><b>Ho Chi Minh City</b></li>
+          <li><span>Interests</span><b>Web, AI, Algorithms</b></li>
           <li><span>GitHub</span><b>@AndrewPham3101</b></li>
         </ul>
       </div>
@@ -281,13 +284,13 @@
   <!-- SKILLS -->
   <section id="skills" class="container">
     <div class="reveal">
-      <span class="eyebrow">Kỹ năng</span>
-      <h2>Công nghệ mình sử dụng</h2>
-      <p class="lead">Những ngôn ngữ, thư viện và công cụ mình đã làm việc cùng.</p>
+      <span class="eyebrow">Skills</span>
+      <h2>Technologies I Use</h2>
+      <p class="lead">Languages, libraries, and tools I have worked with.</p>
     </div>
     <div class="skills-grid">
       <div class="glass skill-group reveal">
-        <h3>Ngôn ngữ lập trình</h3>
+        <h3>Programming Languages</h3>
         <div class="chips">
           <span class="chip">C++</span>
           <span class="chip">C</span>
@@ -300,7 +303,7 @@
         </div>
       </div>
       <div class="glass skill-group reveal">
-        <h3>AI &amp; Dữ liệu</h3>
+        <h3>AI &amp; Data</h3>
         <div class="chips">
           <span class="chip">TensorFlow</span>
           <span class="chip">PyTorch</span>
@@ -308,7 +311,7 @@
         </div>
       </div>
       <div class="glass skill-group reveal">
-        <h3>Công cụ &amp; Phần cứng</h3>
+        <h3>Tools &amp; Hardware</h3>
         <div class="chips">
           <span class="chip">Git</span>
           <span class="chip">GitHub</span>
@@ -321,37 +324,37 @@
   <!-- PROJECTS -->
   <section id="projects" class="container">
     <div class="reveal">
-      <span class="eyebrow">Dự án</span>
-      <h2>Những dự án nổi bật</h2>
-      <p class="lead">Một số repository được ghim trên GitHub của mình.</p>
+      <span class="eyebrow">Projects</span>
+      <h2>Featured Projects</h2>
+      <p class="lead">A selection of repositories pinned on my GitHub.</p>
     </div>
     <div class="projects">
       <article class="glass project reveal">
         <span class="lang">C++</span>
         <h3>Data_Structures_Algorithms</h3>
-        <p>Cài đặt các cấu trúc dữ liệu và thuật toán kinh điển bằng C++.</p>
-        <a class="more" href="https://github.com/AndrewPham3101/Data_Structures_Algorithms" target="_blank" rel="noopener">Xem mã nguồn →</a>
+        <p>Classic data structures and algorithms in C++.</p>
+        <a class="more" href="https://github.com/AndrewPham3101/Data_Structures_Algorithms" target="_blank" rel="noopener">View source →</a>
       </article>
 
       <article class="glass project reveal">
         <span class="lang">Assembly</span>
         <h3>Gomoku_Game</h3>
-        <p>Trò chơi Gomoku (cờ caro) được viết bằng hợp ngữ Assembly.</p>
-        <a class="more" href="https://github.com/AndrewPham3101/Gomoku_Game" target="_blank" rel="noopener">Xem mã nguồn →</a>
+        <p>A Gomoku (five-in-a-row) game written in Assembly.</p>
+        <a class="more" href="https://github.com/AndrewPham3101/Gomoku_Game" target="_blank" rel="noopener">View source →</a>
       </article>
 
       <article class="glass project reveal">
         <span class="lang">C++</span>
         <h3>esp32-environment-monitor</h3>
-        <p>Hệ thống giám sát môi trường dùng ESP32, dự án làm nhóm.</p>
-        <a class="more" href="https://github.com/TienHwng/esp32-environment-monitor" target="_blank" rel="noopener">Xem mã nguồn →</a>
+        <p>An ESP32-based environment monitoring system (team project).</p>
+        <a class="more" href="https://github.com/TienHwng/esp32-environment-monitor" target="_blank" rel="noopener">View source →</a>
       </article>
 
       <article class="glass project reveal">
         <span class="lang">C++</span>
         <h3>Sherlock-Holmes</h3>
-        <p>Dự án C++ lấy cảm hứng từ nhân vật thám tử Sherlock Holmes.</p>
-        <a class="more" href="https://github.com/AndrewPham3101/Sherlock-Holmes" target="_blank" rel="noopener">Xem mã nguồn →</a>
+        <p>A C++ project inspired by the detective Sherlock Holmes.</p>
+        <a class="more" href="https://github.com/AndrewPham3101/Sherlock-Holmes" target="_blank" rel="noopener">View source →</a>
       </article>
     </div>
   </section>
@@ -359,23 +362,23 @@
   <!-- GALLERY -->
   <section class="container">
     <div class="reveal">
-      <span class="eyebrow">Ngoài màn hình</span>
-      <h2>Một chút đời sống</h2>
-      <p class="lead">Không chỉ có code, mình cũng có những khoảnh khắc riêng.</p>
+      <span class="eyebrow">Beyond the Screen</span>
+      <h2>A Glimpse of Life</h2>
+      <p class="lead">Beyond code, I have moments of my own.</p>
     </div>
     <div class="gallery">
       <div class="glass photo reveal">
-        <img src="assets/cafe.jpg" alt="Phạm Ngọc Huy ngồi bên bàn gỗ, nhìn ra ngoài cửa sổ">
+        <img src="assets/cafe.jpg" alt="Phạm Ngọc Huy sitting at a wooden table, gazing out the window">
       </div>
       <div class="glass photo reveal">
-        <img src="assets/life.jpg" alt="Phạm Ngọc Huy trong trang phục xanh, đội nón lá, mỉm cười">
+        <img src="assets/life.jpg" alt="Phạm Ngọc Huy in a green uniform and conical hat, smiling">
       </div>
       <div class="glass caption reveal">
-        <span class="eyebrow">Hành trình</span>
-        <h3>Học hỏi, trải nghiệm và kết nối</h3>
+        <span class="eyebrow">Journey</span>
+        <h3>Learning, Experiences &amp; Connection</h3>
         <p>
-          Mình tin những trải nghiệm ngoài lớp học cũng quan trọng không kém kiến thức
-          trên trường. Chúng giúp mình làm việc nhóm tốt hơn và nhìn vấn đề từ nhiều góc độ.
+          I believe experiences outside the classroom matter just as much as what we learn inside it.
+          They help me work better in teams and see problems from different perspectives.
         </p>
       </div>
     </div>
@@ -384,14 +387,14 @@
   <!-- CONTACT -->
   <section id="contact" class="container">
     <div class="glass contact reveal">
-      <span class="eyebrow">Liên hệ</span>
-      <h2>Hãy kết nối với mình</h2>
+      <span class="eyebrow">Contact</span>
+      <h2>Let's Connect</h2>
       <p>
-        Bạn có ý tưởng thú vị, muốn hợp tác hay đơn giản là muốn nói “xin chào”?
-        Hãy liên hệ với mình qua email hoặc các mạng xã hội bên dưới nhé!
+        Have an interesting idea, want to collaborate, or just want to say hello?
+        Reach out by email or through my social channels below!
       </p>
       <span class="email">pngochuy.contact@gmail.com</span>
-      <a href="mailto:pngochuy.contact@gmail.com" class="btn btn-primary">Gửi email cho mình</a>
+      <a href="mailto:pngochuy.contact@gmail.com" class="btn btn-primary">Email Me</a>
 
       <div class="socials">
         <a href="https://github.com/AndrewPham3101" target="_blank" rel="noopener">GitHub</a>
@@ -404,7 +407,7 @@
 </main>
 
 <footer>
-  <p>© 2026 Phạm Ngọc Huy. Xây dựng với đam mê và rất nhiều cà phê.</p>
+  <p>© 2026 Phạm Ngọc Huy. Built with passion and plenty of coffee.</p>
 </footer>
 
 <script>
